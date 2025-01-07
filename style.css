@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #291406;
+}
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    padding: 50px 0px;
+}
+.menu  .menu_nome_company h2{
+    color: #bdb2aa;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.menu .menu_nome_company h2::after{
+    content: '';
+    border-bottom: 3px solid #bdb2aa;
+    display: flex;
+    width: 60px;
+    margin: 10px 0px;
+    animation: Aumentar 3s infinite;
+}
+@keyframes Aumentar {
+    0%, 100%{
+        width: 0;
+        border-bottom: 3px solid #fff;
+        border-radius: 20px;
+    }
+    50%{
+        width: 90px;
+    }
+}
+.menu .menu_itens nav{
+    display: flex;
+    gap: 20px;
+}
+.menu .menu_itens nav a{
+    text-decoration: none;
+    color: #665c55;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 1s;
+}
+.menu .menu_itens nav a:hover{
+    color: #42372f;
+}
+.menu_itens nav .design_class::after{
+    content: '';
+    display: flex;
+    border-bottom: 3px solid #665c55;
+    margin: 10px auto;
+    width: 40px;
+    transition: 4s;
+}
+.container_info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+.image__images{
+    background-color: #4d260c;
+    max-width: 100%;
+    min-width: 10%;
+    height: 580px;
+}
+.image__images .imagem img{
+    max-width: 100%;
+    width: 400px;
+}
+.image__images .icones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.image__images .icones img{
+    width: 30px;
+    cursor: pointer;
+    transition: 1s;
+}
+.image__images .icones img:hover{
+    transform: translateY(-8px);
+}
+.container_content h1{
+    display: flex;
+    color: #fff;
+    font-family:  monospace;
+    font-size: 5rem;
+    max-width: 100%;
+    min-width: 2rem;
+    overflow: hidden;
+    animation: movimento 1s infinite;
+}
+.container_content h1::after{
+    content: '';
+    display: flex;
+    margin: 0px 0px 0px 10px;
+    border-left: 3px solid #fff;
+    height: 90px;
+}
+@keyframes movimento {
+    
+}
+.container_content p{
+    color: #8d6042;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+    width: 400px;
+    margin: 5px 0px 20px 0px;
+}
+.container > div .add{
+    background-color: #bdb2aa;
+    padding: 15px 42px;
+    border: none;
+    color: #272320;
+    font-size: 1.2rem;
+    transition: 1.5s;
+    cursor: pointer;
+}
+.container > div .buy{
+    background-color: #272320;
+    padding: 15px 42px;
+    border: none;
+    color: #968b84;
+    font-size: 1.2rem;
+    box-shadow: 0 0 10px #36322e;
+    transition: 1s;
+    cursor: pointer;
+}
+.container > div .add:hover{
+    background-color: #837c76;
+    transform: translateY(-3px);
+}
+.container > div .buy:hover{
+    background-color: #1d1a18;
+    transform: translateY(-3px);
+}
