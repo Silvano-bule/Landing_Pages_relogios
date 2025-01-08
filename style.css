@@ -48,6 +48,7 @@ body{
 }
 .menu .menu_itens nav a:hover{
     color: #42372f;
+    transition: 1s;
 }
 .menu_itens nav .design_class::after{
     content: '';
@@ -56,6 +57,13 @@ body{
     margin: 10px auto;
     width: 40px;
     transition: 4s;
+}
+.menu_itens nav .design_class::after{
+    content: '';
+    display: flex;
+    border-bottom: 3px solid #665c55;
+    margin: 10px auto;
+    width: 40px;
 }
 .container_info{
     display: flex;
@@ -97,16 +105,6 @@ body{
     overflow: hidden;
     animation: movimento 1s infinite;
 }
-.container_content h1::after{
-    content: '';
-    display: flex;
-    margin: 0px 0px 0px 10px;
-    border-left: 3px solid #fff;
-    height: 90px;
-}
-@keyframes movimento {
-    
-}
 .container_content p{
     color: #8d6042;
     font-family: Arial, Helvetica, sans-serif;
@@ -140,4 +138,74 @@ body{
 .container > div .buy:hover{
     background-color: #1d1a18;
     transform: translateY(-3px);
+}
+.produts{
+    margin: 100px 0px;
+}
+.produts h1{
+    color: #ffd1bf;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 4rem;
+    text-align: center;
+    margin: 150px 0px;
+}
+.produts h1::after{
+    display: flex;
+    content: '';
+    border-bottom: 3px solid #ffd1bf;
+    margin: auto;
+    width: 90px;
+}
+.produtos_itens{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+.produtos_itens  div{
+    background: linear-gradient(#411f09,#291406);
+    cursor: pointer;
+}
+.produtos_itens .card{
+    background-color: red;
+    width: 400px;
+    height: 800px;
+
+}
+.card:hover{
+    background-color: #837c76;
+}
+.produtos_itens div:hover{
+    background: linear-gradient(#44210a, #44210a);
+    box-shadow: 0 0 10px #00000057;
+}
+.produtos_itens div img{
+    width: 150px;
+    margin: 3rem 6rem;
+}
+.produtos_itens div  p{
+    color: #fff;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem 0rem;
+    font-weight: 200;
+    text-align: center;
+}
+.produtos_itens  div button{
+    border: none;
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0rem 5.2rem 1rem;
+    display: none;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: 1s;
+}
+.produtos_itens div button:hover{
+    background-color: #969494;
+}
+.produtos_itens div:hover  button{
+    display: flex;
 }
