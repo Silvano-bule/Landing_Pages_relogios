@@ -1,23 +1,27 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     background: #291406;
 }
-.menu{
+
+.menu {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 100px;
     padding: 50px 0px;
 }
-.menu  .menu_nome_company h2{
+
+.menu .menu_nome_company h2 {
     color: #bdb2aa;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-.menu .menu_nome_company h2::after{
+
+.menu .menu_nome_company h2::after {
     content: '';
     border-bottom: 3px solid #bdb2aa;
     display: flex;
@@ -25,32 +29,40 @@ body{
     margin: 10px 0px;
     animation: Aumentar 3s infinite;
 }
+
 @keyframes Aumentar {
-    0%, 100%{
+
+    0%,
+    100% {
         width: 0;
         border-bottom: 3px solid #fff;
         border-radius: 20px;
     }
-    50%{
+
+    50% {
         width: 90px;
     }
 }
-.menu .menu_itens nav{
+
+.menu .menu_itens nav {
     display: flex;
     gap: 20px;
 }
-.menu .menu_itens nav a{
+
+.menu .menu_itens nav a {
     text-decoration: none;
     color: #665c55;
     font-size: 1.2rem;
     font-family: Arial, Helvetica, sans-serif;
     transition: 1s;
 }
-.menu .menu_itens nav a:hover{
+
+.menu .menu_itens nav a:hover {
     color: #42372f;
     transition: 1s;
 }
-.menu_itens nav .design_class::after{
+
+.menu_itens nav .design_class::after {
     content: '';
     display: flex;
     border-bottom: 3px solid #665c55;
@@ -58,61 +70,71 @@ body{
     width: 40px;
     transition: 4s;
 }
-.menu_itens nav .design_class::after{
+
+.menu_itens nav .design_class::after {
     content: '';
     display: flex;
     border-bottom: 3px solid #665c55;
     margin: 10px auto;
     width: 40px;
 }
-.container_info{
+
+.container_info {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 80px;
 }
-.image__images{
+
+.image__images {
     background-color: #4d260c;
     max-width: 100%;
     min-width: 10%;
     height: 580px;
 }
-.image__images .imagem img{
+
+.image__images .imagem img {
     max-width: 100%;
     width: 400px;
 }
-.image__images .icones{
+
+.image__images .icones {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 15px;
 }
-.image__images .icones img{
+
+.image__images .icones img {
     width: 30px;
     cursor: pointer;
     transition: 1s;
 }
-.image__images .icones img:hover{
+
+.image__images .icones img:hover {
     transform: translateY(-8px);
 }
-.container_content h1{
+
+.container_content h1 {
     display: flex;
     color: #fff;
-    font-family:  monospace;
+    font-family: monospace;
     font-size: 5rem;
     max-width: 100%;
     min-width: 2rem;
     overflow: hidden;
     animation: movimento 1s infinite;
 }
-.container_content p{
+
+.container_content p {
     color: #8d6042;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.1rem;
     width: 400px;
     margin: 5px 0px 20px 0px;
 }
-.container > div .add{
+
+.container>div .add {
     background-color: #bdb2aa;
     padding: 15px 42px;
     border: none;
@@ -121,7 +143,8 @@ body{
     transition: 1.5s;
     cursor: pointer;
 }
-.container > div .buy{
+
+.container>div .buy {
     background-color: #272320;
     padding: 15px 42px;
     border: none;
@@ -131,68 +154,83 @@ body{
     transition: 1s;
     cursor: pointer;
 }
-.container > div .add:hover{
+
+.container>div .add:hover {
     background-color: #837c76;
     transform: translateY(-3px);
 }
-.container > div .buy:hover{
+
+.container>div .buy:hover {
     background-color: #1d1a18;
     transform: translateY(-3px);
 }
-.produts{
+
+.produts {
     margin: 100px 0px;
 }
-.produts h1{
+
+.produts h1 {
     color: #ffd1bf;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 4rem;
     text-align: center;
     margin: 150px 0px;
 }
-.produts h1::after{
+
+.produts h1::after {
     display: flex;
     content: '';
     border-bottom: 3px solid #ffd1bf;
     margin: auto;
     width: 90px;
 }
-.produtos_itens{
+
+.produtos_itens {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 5rem;
 }
-.produtos_itens  div{
-    background: linear-gradient(#411f09,#291406);
+
+.produtos_itens div {
+    background: linear-gradient(#411f09, #291406);
     cursor: pointer;
+    transition: 1s;
 }
-.produtos_itens .card{
+
+.produtos_itens div:hover {
+    background: linear-gradient(#42200a, #42200a);
+    box-shadow: 0 0 10px #00000057;
+    transform: translateY(-8px);
+}
+
+.produtos_itens .card {
     background-color: red;
     width: 400px;
     height: 800px;
 
 }
-.card:hover{
+
+.card:hover {
     background-color: #837c76;
 }
-.produtos_itens div:hover{
-    background: linear-gradient(#44210a, #44210a);
-    box-shadow: 0 0 10px #00000057;
-}
-.produtos_itens div img{
+
+.produtos_itens div img {
     width: 150px;
     margin: 3rem 6rem;
 }
-.produtos_itens div  p{
+
+.produtos_itens div p {
     color: #fff;
     font-size: 1.2rem;
     font-family: Arial, Helvetica, sans-serif;
-    padding: 1rem 0rem;
+    padding: 0.5rem 0rem 0.4rem 0rem;
     font-weight: 200;
     text-align: center;
 }
-.produtos_itens  div button{
+
+.produtos_itens div button {
     border: none;
     padding: 1rem 3rem;
     font-size: 1.2rem;
@@ -203,9 +241,152 @@ body{
     cursor: pointer;
     transition: 1s;
 }
-.produtos_itens div button:hover{
+
+.produtos_itens div button:hover {
     background-color: #969494;
+    transform: translateY(-8px);
 }
-.produtos_itens div:hover  button{
+
+.produtos_itens div:hover button {
     display: flex;
+}
+
+.produtos_itens div .descrition {
+    color: #816653;
+}
+
+.about__us {
+    margin: 30rem 0rem;
+}
+
+.story {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    flex-wrap: wrap;
+    margin: 0rem 0rem 15rem 0px;
+}
+
+.about__us > h1 {
+    text-align: center;
+    margin: 8rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #dbc9bc;
+}
+
+.about__us>h1::after {
+    content: '';
+    display: flex;
+    margin: 1rem auto;
+    border-bottom: 3px solid #dbc9bc;
+    width: 5rem;
+}
+
+.story .imagem img {
+    width: 28rem;
+}
+
+.story .content p {
+    width: 28rem;
+    color: #c48c67;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.depoimentos .sugestoes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #412512;
+    margin: 2rem auto;
+    width: 40%;
+}
+
+.depoimentos .sugestoes p {
+    width: 30rem;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 3rem 0px 1rem;
+}
+
+.depoimentos .sugestoes p span {
+    font-size: 2rem;
+    color: #754d32;
+    line-height: rem;
+}
+
+.depoimentos .sugestoes .persom__content {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 1rem;
+}
+
+.depoimentos .sugestoes .persom__content h3 {
+    color: #816653;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 1rem 0;
+}
+
+.depoimentos .sugestoes .persom__content img {
+    border-radius: 50%;
+    width: 2rem;
+}
+.recursos{
+    margin: 10rem 0rem;
+}
+.recursos  h1{
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 5rem 0rem;
+    color: #dbc9bc;
+    font-size: 2rem;
+}
+.recursos  h1::after{
+    content: '';
+    display: flex;
+    border-bottom: 3px solid #dbc9bc;
+    margin: auto;
+    width: 3rem;
+}
+.recursos .featured{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+}
+.recursos .featured div{
+   background-color: #41210b;
+   padding: 1rem 2.5rem;
+   box-shadow: 0 0 10px #00000080;
+}
+.recursos .featured div img{
+    display: flex;
+    margin: 1rem auto;
+    width: 4.5rem;
+}
+.recursos .featured div p{
+    width: 16rem;
+    color: #d89a70;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+}
+.recursos .featured div button{
+    display: flex;
+    border: none;
+    padding: 1rem 2rem;
+    background-color: #d19c75;
+    color: #181411;
+    cursor: pointer;
+    margin: 1rem auto;
+    font-weight: 30rem;
+    font-size: 1rem;
+    transition: 1s;
+}
+.recursos .featured div button:hover{
+    background-color: #775944;
 }
