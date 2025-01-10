@@ -14,6 +14,8 @@ body {
     align-items: center;
     gap: 100px;
     padding: 50px 0px;
+    width: 100%;
+    position: fixed;
 }
 
 .menu .menu_nome_company h2 {
@@ -51,7 +53,7 @@ body {
 
 .menu .menu_itens nav a {
     text-decoration: none;
-    color: #665c55;
+    color: #aaaaaa;
     font-size: 1.2rem;
     font-family: Arial, Helvetica, sans-serif;
     transition: 1s;
@@ -78,12 +80,18 @@ body {
     margin: 10px auto;
     width: 40px;
 }
+.menu_background{
+    background-color: transparent;
+    backdrop-filter: blur(2rem);
+    height: 2rem;
+}
 
 .container_info {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 80px;
+    padding: 10rem 0rem;
 }
 
 .image__images {
@@ -311,6 +319,8 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     padding: 3rem 0px 1rem;
+    max-width: 100%;
+    min-width: 2rem;
 }
 
 .depoimentos .sugestoes p span {
@@ -362,7 +372,7 @@ body {
 .recursos .featured div{
    background-color: #41210b;
    padding: 1rem 2.5rem;
-   box-shadow: 0 0 10px #00000080;
+   box-shadow: 0 0 10px #00000059;
 }
 .recursos .featured div img{
     display: flex;
@@ -389,4 +399,75 @@ body {
 }
 .recursos .featured div button:hover{
     background-color: #775944;
+}
+.inscrever_se{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8rem;
+    background-color: #272320;
+    padding: 5rem 10rem;
+    width: 60rem;
+    margin: auto;
+}
+.inscrever_se div p{
+    width: 19rem;
+    color: #8a7d73;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4rem;
+}
+.input_subscrever{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px #0000006b;
+    transform: translateY(-8px);
+}  
+.inscrever_se div input{
+    outline: none;
+    border: none;
+    padding: 1rem 4rem 1rem 2rem;
+    font-size: 1rem;
+}
+.inscrever_se div input::placeholder{
+    color: rgba(128, 128, 128, 0.856);
+}
+.inscrever_se div button{
+    border: none;
+    padding: 1rem 3rem;
+    color: #fff;
+    background-color: #444443;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+}
+footer .info{
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+    flex-wrap: wrap;
+    height: 20rem;
+    padding: 6rem 0rem;
+}
+footer .info div h2{
+    color: #585551;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: start;
+    font-weight: 400;
+    margin: 1rem 0rem;
+    text-align: start;
+}
+footer .info div p{
+    color: #afa69f;
+    font: 400 1.1rem Arial, Helvetica, sans-serif ;
+    margin: 0.5rem 0px;
+    text-align: start;
+}
+footer p{
+    text-align: center;
+    color: #afafaf;
+    font-family: Arial,Helvetica,sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin: 0rem 0rem 2rem 0rem;
 }
