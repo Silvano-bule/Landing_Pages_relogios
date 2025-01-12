@@ -9,18 +9,20 @@ body {
 }
 
 .menu {
+    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 100px;
     padding: 50px 0px;
     width: 100%;
-    position: fixed;
 }
 
-.menu .menu_nome_company h2 {
+.menu .menu_nome_company a {
     color: #bdb2aa;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-decoration: none;
+    font-size: 2rem;
 }
 
 .menu .menu_nome_company h2::after {
@@ -31,26 +33,21 @@ body {
     margin: 10px 0px;
     animation: Aumentar 3s infinite;
 }
-
-@keyframes Aumentar {
-
+@keyframes Aumentar{
     0%,
     100% {
         width: 0;
         border-bottom: 3px solid #fff;
         border-radius: 20px;
     }
-
     50% {
         width: 90px;
     }
 }
-
 .menu .menu_itens nav {
     display: flex;
     gap: 20px;
 }
-
 .menu .menu_itens nav a {
     text-decoration: none;
     color: #aaaaaa;
@@ -58,7 +55,9 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     transition: 1s;
 }
-
+.icone_closed, .icone_menu{
+    display: none;
+}
 .menu .menu_itens nav a:hover {
     color: #42372f;
     transition: 1s;
@@ -90,19 +89,20 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 80px;
-    padding: 10rem 0rem;
+    gap: 2rem;
+    padding: 10rem 1rem;
 }
 
 .image__images {
     background-color: #4d260c;
     max-width: 100%;
-    min-width: 10%;
+    min-width: 10rem;
     height: 580px;
 }
 
 .image__images .imagem img {
     max-width: 100%;
+    min-width: 2.5rem;
     width: 400px;
 }
 
@@ -122,15 +122,14 @@ body {
 .image__images .icones img:hover {
     transform: translateY(-8px);
 }
-
+.container{
+    min-width: 15rem;
+}
 .container_content h1 {
     display: flex;
     color: #fff;
     font-family: monospace;
     font-size: 5rem;
-    max-width: 100%;
-    min-width: 2rem;
-    overflow: hidden;
     animation: movimento 1s infinite;
 }
 
@@ -138,11 +137,17 @@ body {
     color: #8d6042;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.1rem;
-    width: 400px;
+    width: 20rem;
+    min-width: 2rem;
+    max-width: 100%;
     margin: 5px 0px 20px 0px;
 }
-
-.container>div .add {
+.botões{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.container > div .add {
     background-color: #bdb2aa;
     padding: 15px 42px;
     border: none;
@@ -225,7 +230,9 @@ body {
 }
 
 .produtos_itens div img {
-    width: 150px;
+    width: 8rem;
+    min-width: 2rem;
+    max-width: 100%;
     margin: 3rem 6rem;
 }
 
@@ -292,7 +299,8 @@ body {
 }
 
 .story .imagem img {
-    width: 28rem;
+    width: 23rem;
+    min-width: 2rem;
 }
 
 .story .content p {
@@ -321,6 +329,7 @@ body {
     padding: 3rem 0px 1rem;
     max-width: 100%;
     min-width: 2rem;
+    padding: 1rem 2rem;
 }
 
 .depoimentos .sugestoes p span {
@@ -367,6 +376,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 8rem;
 }
 .recursos .featured div{
@@ -404,25 +414,29 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8rem;
+    flex-wrap: wrap;
+    gap: 2rem;
     background-color: #272320;
-    padding: 5rem 10rem;
+    padding: 5rem 0rem;
     width: 60rem;
     margin: auto;
+    min-width:5rem;
+    max-width: 100%;
 }
 .inscrever_se div p{
     width: 19rem;
     color: #8a7d73;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.4rem;
+    min-width: 6rem;
+    max-width: 100%;
 }
 .input_subscrever{
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0 0 10px #0000006b;
-    transform: translateY(-8px);
-}  
+} 
 .inscrever_se div input{
     outline: none;
     border: none;
@@ -435,11 +449,14 @@ body {
 .inscrever_se div button{
     border: none;
     padding: 1rem 3rem;
-    color: #fff;
     background-color: #444443;
+    cursor: pointer;
+}
+.inscrever_se div button a{
+    color: #fff;
+    text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
-    cursor: pointer;
 }
 footer .info{
     display: flex;
@@ -447,7 +464,7 @@ footer .info{
     gap: 10rem;
     flex-wrap: wrap;
     height: 20rem;
-    padding: 6rem 0rem;
+    padding: 10rem 0rem 35rem 0rem;
 }
 footer .info div h2{
     color: #585551;
@@ -470,4 +487,42 @@ footer p{
     font-weight: 400;
     font-size: 1.2rem;
     margin: 0rem 0rem 2rem 0rem;
+}
+@media (max-width: 800px) {
+    .body{
+        position: relative;
+    }
+    .menu_nome_company, .icone_menu{
+        display: flex;
+        align-items: center;
+        padding: .5rem 0rem;
+        cursor: pointer;
+    }
+    .icone_closed{
+        display: flex;
+        width: 3.5rem;
+        cursor: pointer;
+        margin: 0rem;
+    }
+    .menu .menu_itens nav{
+        display: none;
+    }
+    .menu .menu_itens .New_Nav_Bar{
+       position: absolute;
+       left: 0;
+       top: 0;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+       gap: 6rem;
+       padding: 3rem 0px 0px 0px;
+       background-color: transparent;
+       backdrop-filter: blur(40px);
+       height: 100vh;
+       width: 100%;
+    }
+    .menu .menu_itens .New_Nav_Bar a{
+        color: #67acfa;
+    }
 }
